@@ -14,5 +14,5 @@ target/
 
 ### maven ###
 .mvn
-.cmd
+*.cmd
 
