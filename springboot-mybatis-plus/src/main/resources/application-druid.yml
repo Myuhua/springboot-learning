@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    dynamic:
+      # HiKari连接池在springboot2.0上默认使用无需配置
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 1800000000
+        max-pool-size: 15
+        min-idle: 5
+        connection-test-query: select 1
+        pool-name: FebsHikariCP
+      # 配置默认数据源
+      primary: base
+      datasource:
+        # 数据源-1，名称为 base
+        base:
+          username: root
+          password: Admin123!
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://172.16.11.241:3306/ry-vue?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&allowMultiQueries=true&serverTimezone=GMT%2b8
+        # 数据源-2，名称为 quartz
+        quartz:
+          username: root
+          password: Admin123!
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://172.16.11.208:3306/febs_quartz?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
