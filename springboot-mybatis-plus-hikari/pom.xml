@@ -22,11 +22,14 @@
     </properties>
 
     <dependencies>
-        <!--spring系列-->
+
+        <!--springboot web容器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--springboot 测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -38,6 +41,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <!-- mysql驱动 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -51,12 +55,14 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${springboot.maybatis.version}</version>
         </dependency>
+
         <!--mybatis-plus生成插件 引不引都不影响mybaits整合，但是版本得与mybatis-plus一致-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>${springboot.maybatis.version}</version>
         </dependency>
+
         <!-- mybatis-plus整合多数据源-->
         <dependency>
             <groupId>com.baomidou</groupId>
