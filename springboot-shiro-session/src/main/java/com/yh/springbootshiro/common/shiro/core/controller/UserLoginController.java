@@ -1,12 +1,11 @@
-package com.yuhua.springbootshiro.common.shrio.core.controller;
+package com.yh.springbootshiro.common.shiro.core.controller;
 
-
-import com.yuhua.springbootshiro.common.Util.SHA256Util;
-import com.yuhua.springbootshiro.common.Util.ShiroUtils;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysUserEntity;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysUserRoleEntity;
-import com.yuhua.springbootshiro.common.shrio.core.service.SysUserRoleService;
-import com.yuhua.springbootshiro.common.shrio.core.service.SysUserService;
+import com.yh.springbootshiro.common.util.SHA256Util;
+import com.yh.springbootshiro.common.util.ShiroUtils;
+import com.yh.springbootshiro.common.shiro.core.entity.SysUserEntity;
+import com.yh.springbootshiro.common.shiro.core.entity.SysUserRoleEntity;
+import com.yh.springbootshiro.common.shiro.core.service.SysUserRoleService;
+import com.yh.springbootshiro.common.shiro.core.service.SysUserService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -18,9 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Description 用户登录
@@ -60,7 +57,6 @@ public class UserLoginController {
             map.put("msg","登录失败，该用户已被冻结");
             return map;
         } catch (AuthenticationException e) {
-            e.printStackTrace();
             map.put("code",500);
             map.put("msg","该用户不存在");
             return map;
@@ -71,7 +67,7 @@ public class UserLoginController {
         }
         map.put("code",0);
         map.put("msg","登录成功");
-        map.put("token", ShiroUtils.getSession().getId().toString());
+        map.put("token",ShiroUtils.getSession().getId().toString());
         return map;
     }
     /**

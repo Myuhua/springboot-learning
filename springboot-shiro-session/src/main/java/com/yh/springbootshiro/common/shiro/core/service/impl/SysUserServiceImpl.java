@@ -1,11 +1,11 @@
-package com.yuhua.springbootshiro.common.shrio.core.service.impl;
+package com.yh.springbootshiro.common.shiro.core.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yuhua.springbootshiro.common.shrio.core.mapper.SysUserMapper;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysUserEntity;
-import com.yuhua.springbootshiro.common.shrio.core.service.SysUserService;
 import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yh.springbootshiro.common.shiro.core.mapper.SysUserMapper;
+import com.yh.springbootshiro.common.shiro.core.entity.SysUserEntity;
+import com.yh.springbootshiro.common.shiro.core.service.SysUserService;
 
 /**
  * @Description 系统用户业务实现

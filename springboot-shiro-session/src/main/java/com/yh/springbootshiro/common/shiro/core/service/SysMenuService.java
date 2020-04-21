@@ -1,7 +1,7 @@
-package com.yuhua.springbootshiro.common.shrio.core.service;
+package com.yh.springbootshiro.common.shiro.core.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysMenuEntity;
+import com.yh.springbootshiro.common.shiro.core.entity.SysMenuEntity;
 
 import java.util.List;
 

@@ -1,12 +1,11 @@
-package com.yuhua.springbootshiro.common.shrio.core.service.impl;
+package com.yh.springbootshiro.common.shiro.core.service.impl;
 
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yuhua.springbootshiro.common.shrio.core.mapper.SysMenuMapper;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysMenuEntity;
-import com.yuhua.springbootshiro.common.shrio.core.service.SysMenuService;
 import org.springframework.stereotype.Service;
-
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yh.springbootshiro.common.shiro.core.mapper.SysMenuMapper;
+import com.yh.springbootshiro.common.shiro.core.entity.SysMenuEntity;
+import com.yh.springbootshiro.common.shiro.core.service.SysMenuService;
 import java.util.List;
 
 /**

@@ -1,8 +1,7 @@
-package com.yuhua.springbootshiro.common.shrio.core.mapper;
+package com.yh.springbootshiro.common.shiro.core.mapper;
 
+import com.yh.springbootshiro.common.shiro.core.entity.SysMenuEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yuhua.springbootshiro.common.shrio.core.entity.SysMenuEntity;
-
 import java.util.List;
 
 /**
