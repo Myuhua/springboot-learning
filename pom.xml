@@ -18,7 +18,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <!--版本若升级需要同时升级shiro-redis，且修改redisManager方法代码，否则因为版本不匹配会导致方法找不到-->
+        <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
