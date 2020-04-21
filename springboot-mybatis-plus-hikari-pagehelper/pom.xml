@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>springboot</artifactId>
+        <groupId>com.yuhua</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springboot-mybatis-plus-hikari-pagehelper</artifactId>
+
+
+    <properties>
+        <springboot.maybatis.version>3.3.1</springboot.maybatis.version>
+        <dynamic.datasource.version>2.5.1</dynamic.datasource.version>
+    </properties>
+
+    <dependencies>
+
+        <!--mybatis-plus生成插件 引不引都不影响mybaits整合，但是版本得与mybatis-plus一致-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${springboot.maybatis.version}</version>
+        </dependency>
+
+        <!-- mybatis-plus整合多数据源-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${dynamic.datasource.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+
+</project>
