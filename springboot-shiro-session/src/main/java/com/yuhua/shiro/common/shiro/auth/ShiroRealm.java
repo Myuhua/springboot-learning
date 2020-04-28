@@ -3,10 +3,10 @@ package com.yuhua.shiro.common.shiro.auth;
 import com.yuhua.shiro.common.util.ShiroUtils;
 import com.yuhua.shiro.common.shiro.core.entity.SysMenuEntity;
 import com.yuhua.shiro.common.shiro.core.entity.SysRoleEntity;
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
 import com.yuhua.shiro.common.shiro.core.service.SysMenuService;
 import com.yuhua.shiro.common.shiro.core.service.SysRoleService;
-import com.yuhua.shiro.common.shiro.core.service.SysUserService;
+import com.yuhua.shiro.common.shiro.core.service.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -26,7 +26,7 @@ import java.util.Set;
 public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
-    private SysUserService sysUserService;
+    private UserService userService;
     @Autowired
     private SysRoleService sysRoleService;
     @Autowired
@@ -42,8 +42,8 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         //获取用户ID
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        SysUserEntity sysUserEntity = (SysUserEntity) principalCollection.getPrimaryPrincipal();
-        Long userId =sysUserEntity.getUserId();
+        UserEntity userEntity = (UserEntity) principalCollection.getPrimaryPrincipal();
+        Long userId = userEntity.getUserId();
         //这里可以进行授权和处理
         Set<String> rolesSet = new HashSet<>();
         Set<String> permsSet = new HashSet<>();
@@ -73,7 +73,7 @@ public class ShiroRealm extends AuthorizingRealm {
         String username = (String) authenticationToken.getPrincipal();
         //通过username从数据库中查找 User对象，如果找到进行验证
         //实际项目中,这里可以根据实际情况做缓存,如果不做,Shiro自己也是有时间间隔机制,2分钟内不会重复执行该方法
-        SysUserEntity user = sysUserService.selectUserByName(username);
+        UserEntity user = userService.selectUserByName(username);
         //判断账号是否存在
         if (user == null) {
             throw new AuthenticationException();

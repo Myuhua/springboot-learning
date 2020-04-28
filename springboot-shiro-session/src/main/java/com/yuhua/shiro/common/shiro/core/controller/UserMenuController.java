@@ -4,11 +4,11 @@ import com.yuhua.shiro.common.util.ShiroUtils;
 import com.yuhua.shiro.common.shiro.core.entity.SysMenuEntity;
 import com.yuhua.shiro.common.shiro.core.entity.SysRoleEntity;
 import com.yuhua.shiro.common.shiro.core.entity.SysRoleMenuEntity;
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
 import com.yuhua.shiro.common.shiro.core.service.SysMenuService;
 import com.yuhua.shiro.common.shiro.core.service.SysRoleMenuService;
 import com.yuhua.shiro.common.shiro.core.service.SysRoleService;
-import com.yuhua.shiro.common.shiro.core.service.SysUserService;
+import com.yuhua.shiro.common.shiro.core.service.UserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ import java.util.Map;
 public class UserMenuController {
 
     @Autowired
-    private SysUserService sysUserService;
+    private UserService userService;
     @Autowired
     private SysRoleService sysRoleService;
     @Autowired
@@ -45,8 +45,8 @@ public class UserMenuController {
     @RequiresPermissions("sys:user:info")
     public Map<String,Object> getUserInfoList(){
         Map<String,Object> map = new HashMap<>();
-        List<SysUserEntity> sysUserEntityList = sysUserService.list();
-        map.put("sysUserEntityList",sysUserEntityList);
+        List<UserEntity> userEntityList = userService.list();
+        map.put("sysUserEntityList", userEntityList);
         return map;
     }
 
@@ -90,8 +90,8 @@ public class UserMenuController {
     @RequiresPermissions("sys:info:all")
     public Map<String,Object> getInfoAll(){
         Map<String,Object> map = new HashMap<>();
-        List<SysUserEntity> sysUserEntityList = sysUserService.list();
-        map.put("sysUserEntityList",sysUserEntityList);
+        List<UserEntity> userEntityList = userService.list();
+        map.put("sysUserEntityList", userEntityList);
         List<SysRoleEntity> sysRoleEntityList = sysRoleService.list();
         map.put("sysRoleEntityList",sysRoleEntityList);
         List<SysMenuEntity> sysMenuEntityList = sysMenuService.list();

@@ -2,10 +2,10 @@ package com.yuhua.shiro.common.shiro.core.controller;
 
 import com.yuhua.shiro.common.util.SHA256Util;
 import com.yuhua.shiro.common.util.ShiroUtils;
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
 import com.yuhua.shiro.common.shiro.core.entity.SysUserRoleEntity;
 import com.yuhua.shiro.common.shiro.core.service.SysUserRoleService;
-import com.yuhua.shiro.common.shiro.core.service.SysUserService;
+import com.yuhua.shiro.common.shiro.core.service.UserService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -29,7 +29,7 @@ import java.util.*;
 public class UserLoginController {
 
     @Autowired
-    private SysUserService sysUserService;
+    private UserService userService;
     @Autowired
     private SysUserRoleService sysUserRoleService;
 
@@ -39,13 +39,13 @@ public class UserLoginController {
      * @CreateTime 2019/6/20 9:21
      */
     @RequestMapping("/login")
-    public Map<String,Object> login(@RequestBody SysUserEntity sysUserEntity){
+    public Map<String,Object> login(@RequestBody UserEntity userEntity){
         Map<String,Object> map = new HashMap<>();
         //进行身份验证
         try{
             //验证身份和登陆
             Subject subject = SecurityUtils.getSubject();
-            UsernamePasswordToken token = new UsernamePasswordToken(sysUserEntity.getUsername(), sysUserEntity.getPassword());
+            UsernamePasswordToken token = new UsernamePasswordToken(userEntity.getUsername(), userEntity.getPassword());
             //进行登录操作
             subject.login(token);
         }catch (IncorrectCredentialsException e) {
@@ -93,7 +93,7 @@ public class UserLoginController {
     @RequestMapping("/testAddUser")
     public Map<String,Object> testAddUser(){
         // 设置基础参数
-        SysUserEntity sysUser = new SysUserEntity();
+        UserEntity sysUser = new UserEntity();
         sysUser.setUsername("user1");
         sysUser.setState("NORMAL");
         // 随机生成盐值
@@ -103,7 +103,7 @@ public class UserLoginController {
         String password ="123456";
         sysUser.setPassword(SHA256Util.sha256(password, sysUser.getSalt()));
         // 保存用户
-        sysUserService.save(sysUser);
+        userService.save(sysUser);
         // 保存角色
         SysUserRoleEntity sysUserRoleEntity = new SysUserRoleEntity();
         sysUserRoleEntity.setUserId(sysUser.getUserId()); // 保存用户完之后会把ID返回给用户实体

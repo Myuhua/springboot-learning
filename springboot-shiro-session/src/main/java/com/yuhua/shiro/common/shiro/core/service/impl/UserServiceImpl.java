@@ -3,9 +3,9 @@ package com.yuhua.shiro.common.shiro.core.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yuhua.shiro.common.shiro.core.mapper.SysUserMapper;
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
-import com.yuhua.shiro.common.shiro.core.service.SysUserService;
+import com.yuhua.shiro.common.shiro.core.mapper.UserMapper;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
+import com.yuhua.shiro.common.shiro.core.service.UserService;
 
 /**
  * @Description 系统用户业务实现
@@ -13,7 +13,7 @@ import com.yuhua.shiro.common.shiro.core.service.SysUserService;
  * @CreateTime 2019/6/14 15:57
  */
 @Service("sysUserService")
-public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserEntity> implements SysUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> implements UserService {
 
     /**
      * 根据用户名查询实体
@@ -23,9 +23,9 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserEntity
      * @Return SysUserEntity 用户实体
      */
     @Override
-    public SysUserEntity selectUserByName(String username) {
-        QueryWrapper<SysUserEntity> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(SysUserEntity::getUsername,username);
+    public UserEntity selectUserByName(String username) {
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().eq(UserEntity::getUsername,username);
         return this.baseMapper.selectOne(queryWrapper);
     }
 }

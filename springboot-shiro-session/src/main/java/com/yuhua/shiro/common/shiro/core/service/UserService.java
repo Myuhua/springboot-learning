@@ -1,14 +1,14 @@
 package com.yuhua.shiro.common.shiro.core.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
 
 /**
  * @Description 系统用户业务接口
  * @Author Sans
  * @CreateTime 2019/6/14 15:57
  */
-public interface SysUserService extends IService<SysUserEntity> {
+public interface UserService extends IService<UserEntity> {
 
     /**
      * 根据用户名查询实体
@@ -17,7 +17,7 @@ public interface SysUserService extends IService<SysUserEntity> {
      * @Param  username 用户名
      * @Return SysUserEntity 用户实体
      */
-    SysUserEntity selectUserByName(String username);
+    UserEntity selectUserByName(String username);
 
 }
 

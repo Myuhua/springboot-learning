@@ -1,6 +1,6 @@
 package com.yuhua.shiro.common.util;
 
-import com.yuhua.shiro.common.shiro.core.entity.SysUserEntity;
+import com.yuhua.shiro.common.shiro.core.entity.UserEntity;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.LogoutAware;
@@ -49,8 +49,8 @@ public class ShiroUtils {
 	 * @CreateTime 2019/6/17 17:03
 	 * @Return SysUserEntity 用户信息
 	 */
-	public static SysUserEntity getUserInfo() {
-		return (SysUserEntity) SecurityUtils.getSubject().getPrincipal();
+	public static UserEntity getUserInfo() {
+		return (UserEntity) SecurityUtils.getSubject().getPrincipal();
 	}
 
     /**
@@ -65,7 +65,7 @@ public class ShiroUtils {
         //从缓存中获取Session
         Session session = null;
         Collection<Session> sessions = redisSessionDAO.getActiveSessions();
-        SysUserEntity sysUserEntity;
+        UserEntity userEntity;
         Object attribute = null;
         for(Session sessionInfo : sessions){
             //遍历Session,找到该用户名称对应的Session
@@ -73,11 +73,11 @@ public class ShiroUtils {
             if (attribute == null) {
                 continue;
             }
-            sysUserEntity = (SysUserEntity) ((SimplePrincipalCollection) attribute).getPrimaryPrincipal();
-            if (sysUserEntity == null) {
+            userEntity = (UserEntity) ((SimplePrincipalCollection) attribute).getPrimaryPrincipal();
+            if (userEntity == null) {
                 continue;
             }
-            if (Objects.equals(sysUserEntity.getUsername(), username)) {
+            if (Objects.equals(userEntity.getUsername(), username)) {
                 session=sessionInfo;
                 break;
             }

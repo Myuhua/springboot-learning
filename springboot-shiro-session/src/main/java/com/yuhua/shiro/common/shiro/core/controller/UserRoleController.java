@@ -4,7 +4,7 @@ import com.yuhua.shiro.common.util.ShiroUtils;
 import com.yuhua.shiro.common.shiro.core.service.SysMenuService;
 import com.yuhua.shiro.common.shiro.core.service.SysRoleMenuService;
 import com.yuhua.shiro.common.shiro.core.service.SysRoleService;
-import com.yuhua.shiro.common.shiro.core.service.SysUserService;
+import com.yuhua.shiro.common.shiro.core.service.UserService;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.authz.annotation.RequiresUser;
@@ -24,7 +24,7 @@ import java.util.Map;
 public class UserRoleController {
 
     @Autowired
-    private SysUserService sysUserService;
+    private UserService userService;
     @Autowired
     private SysRoleService sysRoleService;
     @Autowired
