@@ -1,2 +1,0 @@
-# springboot-learning
-本项目以hikari为mysql数据库连接池，springboot整合mybaits-plus实现代码的CRUD

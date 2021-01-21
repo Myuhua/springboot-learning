@@ -5,20 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yuhua</groupId>
-    <artifactId>springboot</artifactId>
+    <artifactId>springboot-integration</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springboot-helloworld</module>
-        <module>springboot-mybaits-plus-druid-pagehelper</module>
-        <module>springboot-mybatis-plus-hikari-pagehelper</module>
+        <module>springboot-hikari</module>
+        <module>springboot-druid</module>
+        <module>springboot-thymeleaf</module>
         <module>springboot-shiro-session</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!--版本若升级需要同时升级shiro-redis，且修改redisManager方法代码，否则因为版本不匹配会导致方法找不到-->
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -30,52 +30,6 @@
         <springboot.pagehelper.version>1.2.13</springboot.pagehelper.version>
         <springboot.maybatis.version>3.3.1</springboot.maybatis.version>
     </properties>
-
-
-    <dependencies>
-
-        <!--springboot-web容器-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--springboot测试模块-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <!--pagehelper分页插件-->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${springboot.pagehelper.version}</version>
-        </dependency>
-
-        <!--mysql驱动-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!--springboot 整合mybatis-plus-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${springboot.maybatis.version}</version>
-        </dependency>
-
-
-    </dependencies>
 
     <build>
         <plugins>
@@ -93,18 +47,6 @@
                 </executions>
             </plugin>
         </plugins>
-        <!-- <sourceDirectory>src/main/java</sourceDirectory >
-         <testSourceDirectory>src/test/java</testSourceDirectory >
-         <resources>
-             <resource>
-                 <directory>src/main/resources</directory>
-             </resource>
-         </resources>
-         <testResources>
-             <testResource>
-                 <directory>src/test/resources</directory>
-             </testResource>
-         </testResources>-->
     </build>
 
 

@@ -1,18 +1,4 @@
-springboot-helloworld/HELP.md
-springboot-helloworld/mvnw
+.idea/
+log/
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**
-!**/src/test/**
-
-
-### IntelliJ IDEA ###
-.idea
-*.iws
 *.iml
-*.ipr
-
-### maven ###
-.mvn
-*.cmd
-

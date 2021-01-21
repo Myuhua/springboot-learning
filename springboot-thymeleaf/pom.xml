@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>com.yuhua</groupId>
         <artifactId>springboot-integration</artifactId>
+        <groupId>com.yuhua</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springboot-helloworld</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springboot-thymeleaf</artifactId>
+
+
+    <properties>
+        <maybatis-plus.version>3.3.1</maybatis-plus.version>
+    </properties>
 
     <dependencies>
-
-        <!-- springboot相关项目公共依赖-->
         <!--springboot-web web开发核心依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--thymeleaf模板引擎整合 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
+
 
 </project>
