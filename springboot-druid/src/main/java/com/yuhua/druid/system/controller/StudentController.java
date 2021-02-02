@@ -1,7 +1,6 @@
 package com.yuhua.druid.system.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+
 import com.yuhua.druid.system.entity.Student;
 import com.yuhua.druid.system.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,9 @@ public class StudentController {
     private StudentService studentService;
 
     @GetMapping("/list")
-    public PageInfo list(Student student) {
-        PageHelper.startPage(2,5);
+    public List list(Student student) {
         List list=studentService.selectList(student);
-        PageInfo<Student> pageInfo = new PageInfo<Student>(list);
-        return pageInfo;
+        return list;
     }
 
 }

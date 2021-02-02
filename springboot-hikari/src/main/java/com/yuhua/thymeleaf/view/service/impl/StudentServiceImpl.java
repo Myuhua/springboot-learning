@@ -1,8 +1,8 @@
-package com.yuhua.hikari.view.service.impl;
+package com.yuhua.thymeleaf.view.service.impl;
 
-import com.yuhua.hikari.view.entity.Student;
-import com.yuhua.hikari.view.mapper.StudentMapper;
-import com.yuhua.hikari.view.service.StudentService;
+import com.yuhua.thymeleaf.view.entity.Student;
+import com.yuhua.thymeleaf.view.mapper.StudentMapper;
+import com.yuhua.thymeleaf.view.service.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

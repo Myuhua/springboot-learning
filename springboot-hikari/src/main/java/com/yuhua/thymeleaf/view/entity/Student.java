@@ -1,4 +1,4 @@
-package com.yuhua.hikari.view.entity;
+package com.yuhua.thymeleaf.view.entity;
 
 
 

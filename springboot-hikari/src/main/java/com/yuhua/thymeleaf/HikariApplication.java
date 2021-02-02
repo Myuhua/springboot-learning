@@ -1,4 +1,4 @@
-package com.yuhua.hikari;
+package com.yuhua.thymeleaf;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

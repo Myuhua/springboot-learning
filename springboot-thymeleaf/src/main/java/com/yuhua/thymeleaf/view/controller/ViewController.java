@@ -1,4 +1,4 @@
-package com.yuhua.hikari.view.controller;
+package com.yuhua.thymeleaf.view.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

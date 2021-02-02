@@ -1,7 +1,7 @@
-package com.yuhua.hikari.view.controller;
+package com.yuhua.thymeleaf.view.controller;
 
-import com.yuhua.hikari.view.entity.Student;
-import com.yuhua.hikari.view.service.StudentService;
+import com.yuhua.thymeleaf.view.entity.Student;
+import com.yuhua.thymeleaf.view.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

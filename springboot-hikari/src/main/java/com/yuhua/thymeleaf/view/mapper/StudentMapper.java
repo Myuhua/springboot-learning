@@ -1,6 +1,6 @@
-package com.yuhua.hikari.view.mapper;
+package com.yuhua.thymeleaf.view.mapper;
 
-import com.yuhua.hikari.view.entity.Student;
+import com.yuhua.thymeleaf.view.entity.Student;
 
 import java.util.List;
 

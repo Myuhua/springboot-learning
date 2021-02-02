@@ -1,6 +1,6 @@
-package com.yuhua.hikari.view.service;
+package com.yuhua.thymeleaf.view.service;
 
-import com.yuhua.hikari.view.entity.Student;
+import com.yuhua.thymeleaf.view.entity.Student;
 
 import java.util.List;
 

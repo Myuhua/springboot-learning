@@ -15,6 +15,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- AOP依赖,一定要加,否则权限拦截验证不生效 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
