@@ -14,8 +14,6 @@
         <module>springboot-druid</module>
         <module>springboot-thymeleaf</module>
         <module>springboot-shiro-session</module>
-        <module>springboot-devtools</module>
-
     </modules>
 
     <parent>
