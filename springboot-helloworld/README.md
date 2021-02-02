@@ -8,4 +8,5 @@
       <artifactId>spring-boot-starter-web</artifactId>
   </dependency>
 ```
-启动服务后，访问http://localhost:8081/，成功则返回如图img/success.png的内容。
+# 测试说明
+启动服务后，访问http://localhost:8080/ ，成功则返回成功则返回![success页面](img/success.jpg)。

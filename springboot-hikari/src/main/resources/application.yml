@@ -1,8 +1,12 @@
 server:
-  port: 8081
+  port: 8080
 spring:
   profiles:
     active: hikari
+
+mybatis-plus:
+  type-aliases-package: com.yuhua.**.entity
+  mapper-locations: classpath:mapper/*/*.xml
 
 
 

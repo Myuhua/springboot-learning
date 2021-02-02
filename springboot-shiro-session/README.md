@@ -7,6 +7,8 @@ SpringBoot整合Shiro示例实现动态权限加载更新+Session共享+单点�
 
 相关文章请移步到原创作者博客:https://juejin.im/post/5d087d605188256de9779e64
 
+[shiro官方文档中文版](http://greycode.github.io/shiro/doc/reference.html)
+
 
 
 

@@ -23,15 +23,4 @@ spring:
     connection-timeout: 30000
     connection-test-query: SELECT 1
 
-# mybatis-plus详细配置官网 https://mp.baomidou.com/config/，除必要配置外 ，其他配置可根据需要参考官网文档配置
-mybatis-plus:
-  # 实体类扫描路径
-  type-aliases-package: com.yuhua.**.entity
-  # xml 扫描路径
-  mapper-locations: classpath:mapper/*/*.xml
-  #以下两项可不配置
-  configuration:
-    jdbc-type-for-null: null
-  global-config:
-    # 关闭 mybatis-plus的 banner
-    banner: false
+

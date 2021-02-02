@@ -17,21 +17,16 @@ thymeleaf是可以用来完成动态页面模板引擎。
         </dependency>
 ```
 # 配置
+核心配置
 ```
 # 官方文档： https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html
 spring:
   thymeleaf:
     # 关闭thymeleaf缓存 开发时使用 否则没有实时画面
     cache: false
-    # 以下配置可以选择配置（不配也可以）
-    prefix: classpath:/templates/
-    check-template-location: true
-    suffix: .html
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
-    mode: HTML5
 ```
-启动服务后，访问http://localhost:8081/，成功则返回如图img/success.png的内容。
+
+# 测试说明
+启动服务后，访问http://localhost:8080/ ，成功则返回成功则返回![success页面](img/success.jpg)。
 
 
