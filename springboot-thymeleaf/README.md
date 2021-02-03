@@ -24,6 +24,7 @@ spring:
     # 关闭thymeleaf缓存 开发时使用 否则没有实时画面
     cache: false
 ```
+完整项目配置请参见[application.yml](application.yml)与[application-thymeleaf.yml](application-thymeleaf.yml)  
 
 # 测试说明
 启动服务后，访问http://localhost:8080/ ，成功则返回成功则返回![success页面](img/success.jpg)。
