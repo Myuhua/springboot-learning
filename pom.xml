@@ -15,6 +15,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-shiro-session</module>
         <module>springboot-devtools</module>
+        <module>springboot-aop</module>
     </modules>
 
     <parent>
