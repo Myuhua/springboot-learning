@@ -16,6 +16,8 @@
         <module>springboot-shiro-session</module>
         <module>springboot-devtools</module>
         <module>springboot-aop</module>
+        <module>springboot-security</module>
+        <module>springboot-redis</module>
     </modules>
 
     <parent>
