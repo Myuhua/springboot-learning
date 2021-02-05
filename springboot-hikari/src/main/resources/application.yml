@@ -5,7 +5,7 @@ spring:
     active: hikari
 
 mybatis-plus:
-  type-aliases-package: com.yuhua.**.entity
+  type-aliases-package: cc.yh.**.entity
   mapper-locations: classpath:mapper/*/*.xml
 
 

@@ -5,3 +5,12 @@ spring:
     active: security
   thymeleaf:
     cache: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.16.11.244:3306/alive?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Admin123!
+mybatis-plus:
+  type-aliases-package: cc.yh.**.entity
+  mapper-locations: classpath:mapper/*/*.xml
