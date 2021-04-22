@@ -1,7 +1,7 @@
 # 项目说明
-
+本项目整合Spring Security安全框架实现对应用系统的安全访问控制。
 # security介绍
-
+![srping-security](https://www.springcloud.cc/spring-security.html#oauth2login-sample-application-config)
 
 # 整合过程
 

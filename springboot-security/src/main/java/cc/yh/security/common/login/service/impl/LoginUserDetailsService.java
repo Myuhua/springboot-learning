@@ -1,4 +1,4 @@
-package cc.yh.security.common.login.service;
+package cc.yh.security.common.login.service.impl;
 
 import cc.yh.security.entity.SysUser;
 import cc.yh.security.service.IUserService;
